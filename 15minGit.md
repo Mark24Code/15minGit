@@ -119,8 +119,10 @@ Git设计的都这么烂
 
 Git本身的Windows上的客户端，烂的不堪，直接忽略  
 
-TortoiseGit这种设计烂的软件  
+TortoiseGit这种设计烂的软件 
+
 ![TortoiseGit logo](http://ww3.sinaimg.cn/mw690/44894cbbgw1euihv3d7fpj20ap02fjrf.jpg)
+
 我都懒得推荐  
 个人把它拉入黑名单  
 推荐大家也别用了  
