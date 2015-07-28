@@ -9,7 +9,22 @@
 告别枯燥文档  
 15分钟学会Git立刻投入生产力
 
+教程目标内容：  
+
+* add
+* commit
+* push
+* revert
+* checkout
+* checkout HEAD
+* stash
+* branch
+* merge
+* 解决冲突
+* 分支策略
+
 文档持续更新中
+
 
 <hr>
 资源声明:图片来自于互联网  
