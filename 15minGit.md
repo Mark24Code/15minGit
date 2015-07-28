@@ -235,20 +235,20 @@ local repository --> remote repository
 提交的过程，按照箭头，由下往上：  
 
 remote repository：远程仓库  
-^
-|
+^  
+|  
 | push：就是“推”，把本地的正式的提交代码，推到网络上  
-|
+|  
 local repository：本地仓库  
-^
-|
+^  
+|  
 | commit：合并多次修改，提交到仓库保存  
-|
+|  
 index :暂存区  
-^
-|
+^  
+|  
 | add：一段阶段的代码，保存  
-|
+|  
 Workspace：正在写代码，写的不错了  
 
 
