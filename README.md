@@ -4,6 +4,8 @@
 ##### 时间：2015.07.28
 ![git_logo](http://ww1.sinaimg.cn/mw690/44894cbbgw1euism5dws6j20dm05ojrh.jpg)
 
+###关于
+
 告别枯燥文档  
 15分钟学会Git立刻投入生产力
 
