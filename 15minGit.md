@@ -350,7 +350,7 @@ Source Tree实时帮你显示，所以diff这个命令压根不需要你敲
 现在了解完毕Git的工作流程  
 现在让我们用Source Tree走一遍
 
-本篇文章就是在Github上建立的一个项目(如果不知道怎么做，轻查询Github官方教程)  
+本篇文章就是在Github上建立的一个项目(如果不知道怎么做，请查询Github官方教程)  
 然后clone到本地  
 把项目添加到了Source Tree
 
