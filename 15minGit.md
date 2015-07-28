@@ -106,6 +106,7 @@ Git设计的都这么烂
 重要的事情说三遍  
 
 用一个叫做[Source Tree](https://www.sourcetreeapp.com/)的软件
+
 ![Source Tree logo](http://ww4.sinaimg.cn/mw690/44894cbbgw1euiht2996nj209e03ot8s.jpg)
 
 
