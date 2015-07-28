@@ -1268,20 +1268,69 @@ Source Tree用了很优雅的方式和直觉化的流程，让你很优雅的使
 <p>Branch：分支,这个不讲，一般项目负责人负责  </p>
 </li>
 <li>
-<p>Merge: 合并分支，同上  </p>
+<p>Merge: 合并分支，同上</p>
 </li>
 </ul>
-<p>下面一个框区  </p>
-<p>就是diff<br />
+<p>觉得难记没关系，SourceTree有中文界面可以挑<br />
+用英文，主要是和Git的命令，对应起来，有助于找规律  </p>
+<p>下面一个框区，就是diff，比较代码不同的地方<br />
 红色是删掉的，标记为减号<br />
 绿色是添加的，标记为加号  </p>
 <p>Source Tree实时帮你显示，所以diff这个命令压根不需要你敲  </p>
-<p>了解Git的流程<br />
-尝试去学习一下Source Tree去工作<br />
-先写到这里  </p>
-<p>有空再写写具体怎么用Source Tree<br />
-如何撤销<br />
-分支创建和合并<br />
-还有团队合作策略（stash的应用），如何避免冲突  </p>
+<p>现在了解完毕Git的工作流程<br />
+现在让我们用Source Tree走一遍</p>
+<p>本篇文章就是在Github上建立的一个项目(如果不知道怎么做，轻查询Github官方教程)<br />
+然后clone到本地<br />
+把项目添加到了Source Tree</p>
+<p><img alt="step1" src="http://ww1.sinaimg.cn/mw690/44894cbbgw1euivz8amudj20wa0lajwb.jpg" /></p>
+<p>把项目添加到Source Tree<br />
+下面简称SourceTree为ST<br />
+然后用编辑器打开文件编辑，编辑完毕后，保存文件，这个一定要保存，然后可以把编辑器最小化了，然后可以看看ST<br />
+点击如图，第一步，工作副本<br />
+这个要经常点，只要你点了，切换就会刷新<br />
+稍微等一会，第二部的地方，就会出现文件的修改状态<br />
+第二部所在的区域，就是工作区，就是你编辑器，编辑器的文件临时状态，可以部分选，也可以全选，选择后，会出现如下图：</p>
+<p><img alt="step2" src="http://ww3.sinaimg.cn/mw690/44894cbbgw1euivz8qdnkj20vi0ki430.jpg" /></p>
+<p>整个项目移动到上面，就是暂存区，右边是Diff状态，表示你修改了什么</p>
+<p>提交按钮，就是Commit，点击他，进入下图：</p>
+<p><img alt="step3" src="http://ww2.sinaimg.cn/mw690/44894cbbgw1euivz9a1mpj20vi0kin23.jpg" /></p>
+<p>如图会跳出一个commit信息，看过Git的同学，应该知道，每次commit都会让你键入一个message，其实就是写明，你做了什么，改了什么，这样子等到回退，撤销的时候，一看信息就明白了</p>
+<p>下面有一个按钮，和上面的推送是一样的<br />
+可以先commit，然后push<br />
+如果仓库是配置好的  </p>
+<p>按一下，就可以提交代码了  </p>
+<p>提交好代码后，可以看到如图：</p>
+<p><img alt="step4" src="http://ww1.sinaimg.cn/mw690/44894cbbgw1euivz9ommyj20wa0la79d.jpg" /></p>
+<p>左边的分支，可以看到整体情况<br />
+右边的字段：<br />
+图表：一种分支图，可以看清项目合并情况<br />
+描述：就是commit的message<br />
+提交：提交生成的hash码<br />
+作者：谁提交的，这个团队配合作用救命掀了</p>
+<p>真正的复杂的项目，上一张图，让大家感受下：</p>
+<p><img alt="step5" src="http://ww3.sinaimg.cn/mw690/44894cbbgw1euivzaquodj20vj0iladg.jpg" /></p>
+<p>分支情况会特别的复杂，感受下。</p>
+<h3 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>小结</h3>
+<p>ST确实用图形界面把Git的操作简化到十分优雅的地步<br />
+Git提交代码的流程，已经描述完毕<br />
+是不是十分简单</p>
+<h3 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>后记</h3>
+<p>明天有活干了</p>
+<p>关于如何撤销  </p>
+<p>分支创建和合并  </p>
+<p>还有团队合作策略（stash的应用），如何避免冲突  </p>
+<p>这个有空再写</p>
 <p><hr><br />
-图片来自于互联网</p></article></body></html>
+资源声明:图片来自于互联网<br />
+版权声明:自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</p>
+<hr>
+
+<h3 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>反馈</h3>
+<p>可以在issue中反馈，欢迎交流，共同进步</p>
+<hr>
+
+<h3 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>赞助</h3>
+<p>如果你觉得本文章质量不错，读后收获很大，不妨小额赞助我一下，让我有“动力”继续致力于高质量文章和教程</p>
+<p>天气都37摄氏度+了<br />
+不妨，请作者喝瓶汽水吧 ^0^</p>
+<p><img alt="zhifubao" src="http://ww1.sinaimg.cn/mw690/44894cbbgw1euiwofemusj20dt0dijsy.jpg" /></p></article></body></html>
