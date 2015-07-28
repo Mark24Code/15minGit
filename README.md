@@ -1,2 +1,30 @@
-# 15minGit
-15分钟学会Git
+#15分钟学会使用Git
+##### 作者：Mark24
+##### 邮箱：mark.zhangyoung@qq.com
+##### 时间：2015.07.28
+![git_logo](http://ww1.sinaimg.cn/mw690/44894cbbgw1euism5dws6j20dm05ojrh.jpg)
+
+告别枯燥文档  
+15分钟学会Git立刻投入生产力
+
+文档持续更新中
+
+<hr>
+资源声明:图片来自于互联网  
+版权声明:自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）
+
+<hr>
+###反馈
+
+可以在issue中反馈，欢迎交流，共同进步
+
+<hr>
+###赞助
+
+如果你觉得本文章质量不错，读后收获很大，不妨小额赞助我一下，让我有“动力”继续致力于高质量文章和教程
+
+天气都37摄氏度+了
+不妨，请作者喝瓶汽水吧 ^0^
+
+
+![zhifubao](http://ww1.sinaimg.cn/mw690/44894cbbgw1euiwofemusj20dt0dijsy.jpg)
