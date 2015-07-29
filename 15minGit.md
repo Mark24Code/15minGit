@@ -434,4 +434,4 @@ Git提交代码的流程，已经描述完毕
 不妨，请作者喝瓶汽水吧 ^0^
 
 
-![zhifubao](http://ww1.sinaimg.cn/mw690/44894cbbgw1euiwofemusj20dt0dijsy.jpg)
+![zhifubao](http://ww4.sinaimg.cn/mw690/44894cbbgw1eujekbi2shj206o06i3zn.jpg)
