@@ -1,10 +1,26 @@
 #15分钟学会使用Git
+
+###SourceTree简明手册+Git命令讲解
+
 ##### 作者：Mark24
 ##### 邮箱：mark.zhangyoung@qq.com
 ##### 时间：2015.07.28
 ![git_logo](http://ww1.sinaimg.cn/mw690/44894cbbgw1euism5dws6j20dm05ojrh.jpg)
 
 ###关于
+
+借助SourceTree快速的先用上Git
+
+通过GUI直觉化Git操作
+
+顺便介绍一些Git命令
+
+---------------------------
+2015.08.07
+
+
+---------------------------
+2015.07.28
 
 告别枯燥文档  
 15分钟学会Git立刻投入生产力
