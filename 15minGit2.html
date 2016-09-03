@@ -1018,7 +1018,7 @@ body .markdown-body
 <h5 id="mark24"><a name="user-content-mark24" href="#mark24" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>作者：Mark24</h5>
 <h5 id="markzhangyoungqqcom"><a name="user-content-markzhangyoungqqcom" href="#markzhangyoungqqcom" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>邮箱：<a href="mailto:mark.zhangyoung@qq.com">mark.zhangyoung@qq.com</a></h5>
 <h5 id="20160902"><a name="user-content-20160902" href="#20160902" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>时间：2016.09.02</h5>
-<p><img alt="git_logo" src="/Users/Atom/Desktop/15minGit/src/img/00git.jpg" /></p>
+<p><img alt="git_logo" src="http://ww1.sinaimg.cn/mw690/44894cbbgw1f7guv7dslhj20dm05ojrh.jpg" /></p>
 <h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>开头聊聊天</h2>
 <p>之前的15minGit是很不成熟的一篇手记，在内容在关键的地方有所欠缺，所以打算更新下。一方面把自己的一些使用经验记录下，另一方面希望给新手提供一点指导，Git的命令比较混乱，一个命令也会有多种功能，所以对新手不太友好。</p>
 <p>我不想一上来就命令行，我打算先介绍一下SourceTree的用法，顺带着讲讲Git。两边同时并进。</p>
@@ -1361,4 +1361,122 @@ nothing to commit, working tree clean
 <p>避免使用 <code>git checkout -b &lt;分支名&gt;</code> 这种反直觉的。不过随意啦，我相信，打的多了，一定会强迫自己使用简化命令的。懒，是程序员的美德。</p>
 <p><code>git merge &lt;分支B&gt;</code> 合并分支命令。如果你所在分支A，这个操作将会把B分支的内容合并到A上。</p>
 <p><img alt="cli_merge_flow" src="/Users/Atom/Desktop/15minGit/src/img/33cli_merge_flow.gif" /></p>
-<hr /></article></body></html>
+<hr />
+<h4 id="3"><a name="user-content-3" href="#3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>场景3：多人协作，分支+解决冲突</h4>
+<p>前面已经讲完：</p>
+<ul>
+<li>
+<p>创建git仓库</p>
+</li>
+<li>
+<p>基本的提交操作</p>
+</li>
+<li>
+<p>分支与合并</p>
+</li>
+</ul>
+<p>下面我们讲一下解决冲突。一般多人协作的情况下，更容易产生冲突。所以我打算模拟一下多人协作的情景。这里更重点的是强调，解决冲突的方法，其实很简单。一通百通的东西。</p>
+<p>其实多个人协作的时候，本质就是多个分支合并的时候出现的冲突。为什么这么再说呢，我一直在讲本地仓库的工作，一直没有提远程仓库。其实远程仓库就是一种变相的本地仓库。多人协作的的时候，每个人从服务器下载代码，都会在本地生成代码仓库，并且要在一个选定的分支工作。每个人提交的时候，只会遇到两种情况 —— 1.单一分支上，你的提交和别人的提交冲突了，但是实际上，本地会将你的代码以一个临时分支的情况去和目标分支合并，最后还是两个分支合并。2.不同分支合并的时候，两个分支的代码冲突了。所以其实多人协作本质上和创建多个分支，然后去合并，没有啥区别，或者说可以这样子去理解。</p>
+<p>捎带脚的解释一下什么是冲突——所谓冲突就是双方同时对同一个文件的同一个地方/同一部分产生修改。于是计算机知道信谁个好，计算机是很傻的，它不知道内容，无法分辨上下文，不知道你们心中所想。所以解决冲突的问题，只能交给人类来处理。Git的机制是，不解决冲突，你无法提交。Git会智能的去尝试合并，但是一旦出现冲突，文件会被标记成特殊状态。你一定要解决冲突，再去提交。问题解决了，文件才会回归到正常状态。</p>
+<p>回归最朴素的方法，你去找那个出现冲突的文件。Git会给你标记处哪里出现问题。然后对于你来说，找到这个文件，查询这个文件提交的commit记录，是谁提交的，去找到这个人。你们两个在现实生活中去协商，当面聊也好，电子邮件，QQ也好。反正你们共同决定，冲突这部分，谁的代码留下来，还是两部分都留下来。有人可能觉得自己能看懂，就自己解决。其实并非这样，大多数都是项目庞大，分工变得非常细致。很多时候，你也不知道这地方别人的代码意义是什么，所以你们必须彼此交流。确保这地方不会出现问题。最后确认了。提交人负责解决冲突，再次提交一次。</p>
+<p>这就是解决冲突的整个过程。</p>
+<p>我们分别通过st和命令行来模拟一下这个过程。</p>
+<p>首先我们先创建出一个仓库，包含两个冲突的分支。上面那段已经说了，两个不同的分支，编辑了同一个文件的同一个部分。合并的时候会冲突。利用前面的，我们不论在ST上还是CLI上都可以轻易的制造出这个情况。</p>
+<p>ST流程：</p>
+<ul>
+<li>
+<p>新建一个仓库 st_test</p>
+</li>
+<li>
+<p>在仓库中添加一个文件text,并且编辑内容为 &ldquo;基础demo&rdquo;</p>
+</li>
+<li>
+<p>提交到本地仓库（先到暂存区，然后commit）</p>
+</li>
+<li>
+<p>创建个分支 testA</p>
+</li>
+<li>
+<p>切换到testA分支下，继续编辑这个文件，直接修改第一行为&rdquo;testA&rdquo;</p>
+</li>
+<li>
+<p>testA分支下，提交，本地clean</p>
+</li>
+<li>
+<p>切换到master分支</p>
+</li>
+<li>
+<p>你会发现文件还原了。恩，符合刚才我们说的，平行世界的描述。我还是编辑第一行，&rdquo;master&rdquo; 我们就这样子成功的制造冲突。冲突就在text文件的第一行。master分支写的是&rdquo;master&rdquo;,testA分支写的是&rdquo;testA&rdquo;。</p>
+</li>
+<li>
+<p>master分之下，尝试把testA合并过来。看看会发生什么。</p>
+</li>
+</ul>
+<p>合并的时候，ST会给出友好提示：<br />
+<img alt="st_conflict" src="/Users/Atom/Desktop/15minGit/src/img/34st_conflict.png" /><br />
+<img alt="st_conflict_screen" src="/Users/Atom/Desktop/15minGit/src/img/35st_conflict_screen.png" /><br />
+我们能看到文件的状态确实发生状态了。而且Git修改了文件。我们用Sublime打开文件来看看什么情况。<br />
+<img alt="sublime_conflict" src="/Users/Atom/Desktop/15minGit/src/img/36sublime_conflict.png" /><br />
+文件里被插入了奇怪的字符。其实这事git的一种提示。</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+master
+=======
+testA
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; testA
+</code></pre>
+
+<p><code>HEAD</code> 是一个指针变量，它指向谁，就表明你在哪个分支。比如你在<code>master</code>分支的时候，<code>HEAD</code> -&gt; <code>master</code>。基本上就是这个情况。你在其他分支的时候同理。<br />
+所以这里 <code>HEAD</code>开头和<code>=====</code>之间的部分就是指当前你的修改。而下半部分，就是合并分支的部分，这块 testA其实是我的提交信息。</p>
+<p>好了，我们下面要解决冲突。要做的就是找人协商——由于我自己做的，我不要协商。<br />
+我有三种选择 —— 1.删除我的保留别的分支的 2.删除别的分支的，保留我的 3.去掉奇怪的乱入的符号，保存大家的。</p>
+<p>ST给了友好的策略,能帮你省点事。当然直接去编辑文件也是可以的。<br />
+<img alt="st_conflict_solution" src="/Users/Atom/Desktop/15minGit/src/img/37st_conflict_solution.png" /></p>
+<p>就直接手动去改代码。改成这个样子。真的好朴素啊。解决冲突是个既不高大上，也不专精尖的活儿。</p>
+<p><img alt="sublime_conflict_solution" src="/Users/Atom/Desktop/15minGit/src/img/38sublime_conflict_solution.png" /></p>
+<p>然后你再勇往直前的去正常提交一次就好了。</p>
+<p>最后你会在图谱上看到一个分支合并的轨迹。<br />
+<img alt="st_conflict_merge" src="/Users/Atom/Desktop/15minGit/src/img/39st_conflict_merge.png" /></p>
+<p><img alt="solve_conflict" src="/Users/Atom/Desktop/15minGit/src/img/40solve_conflict.gif" /></p>
+<hr />
+<h4 id="_10"><a name="user-content-_10" href="#_10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>命令行</h4>
+<p><code>git merge &lt;分支B&gt;</code> 合并分支B</p>
+<p>这里会发生冲突</p>
+<pre><code>Auto-merging text
+CONFLICT (content): Merge conflict in text
+Automatic merge failed; fix conflicts and then commit the result.
+</code></pre>
+
+<p>除非你解决冲突，否则你不能进行任何操作。</p>
+<p>接着必然去编辑文件。然后回来继续提交。</p>
+<p><img alt="cli_slove_conflict" src="/Users/Atom/Desktop/15minGit/src/img/41cli_slove_conflict.png" /></p>
+<p><img alt="cli_slove_conflict2" src="/Users/Atom/Desktop/15minGit/src/img/42cli_solve_conflict.gif" /></p>
+<p>到此为止，解决冲突的部分结束。</p>
+<hr />
+<h3 id="_11"><a name="user-content-_11" href="#_11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>后记</h3>
+<p>最近换了新的工作环境，比较忙碌。随着工作生活应用的越多，后面我还想追加一些东西。</p>
+<p>其实还有挺多地方可以提。</p>
+<p>比如：</p>
+<ul>
+<li>
+<p>一个傻瓜式的完整的流程是什么样子的。</p>
+</li>
+<li>
+<p>如何配合Github来工作。</p>
+</li>
+</ul>
+<p>不过我也不断地在学习。这篇不免有纰漏，欢迎指正。</p>
+<hr />
+<p>资源声明:图片来自于互联网<br />
+版权声明:自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</p>
+<hr />
+<h3 id="_12"><a name="user-content-_12" href="#_12" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>反馈</h3>
+<p>可以在issue中反馈，欢迎交流，共同进步</p>
+<hr />
+<h3 id="_13"><a name="user-content-_13" href="#_13" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>打赏</h3>
+<p>如果你觉得本文章质量不错，读后收获很大，不妨小额赞助我一下，让我有“动力”继续致力于高质量文章和教程</p>
+<p>天气都37摄氏度+了<br />
+不妨，请作者喝瓶汽水吧 ^0^</p>
+<p>微信<br />
+<img alt="weixin" src="http://ww1.sinaimg.cn/small/44894cbbgw1f70k6ctxg4j208908a3zq.jpg" /></p>
+<p>支付宝<br />
+<img alt="zhifubao" src="http://ww3.sinaimg.cn/small/44894cbbgw1f70k0qnm93j20dd0ddtak.jpg" /></p></article></body></html>
