@@ -82,7 +82,9 @@ html可以转为PDF，同学自己动下手哈
 如果你觉得本文章质量不错，读后收获很大，不妨小额赞助我一下，让我有“动力”继续致力于高质量文章和教程
 
 微信
+
 ![weixin](http://ww1.sinaimg.cn/small/44894cbbgw1f70k6ctxg4j208908a3zq.jpg)
 
 支付宝
+
 ![zhifubao](http://ww3.sinaimg.cn/small/44894cbbgw1f70k0qnm93j20dd0ddtak.jpg)
