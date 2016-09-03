@@ -1,4 +1,5 @@
 #SourceTree/Git轻指南
+#~~15分钟学会使用Git~~
 ##### 作者：Mark24
 ##### 邮箱：mark.zhangyoung@qq.com
 ##### 时间：2016.09.02
