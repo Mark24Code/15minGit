@@ -1,0 +1,1298 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAzUABAAAAAAFNgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABbAAAABwAAAAcZMzaOEdERUYAAAGIAAAAHQAAACAAOQAET1MvMgAAAagAAAA+AAAAYHqhde9jbWFwAAAB6AAAAFIAAAFa4azkLWN2dCAAAAI8AAAAKAAAACgFgwioZnBnbQAAAmQAAAGxAAACZVO0L6dnYXNwAAAEGAAAAAgAAAAIAAAAEGdseWYAAAQgAAAFDgAACMz7eroHaGVhZAAACTAAAAAwAAAANgWEOEloaGVhAAAJYAAAAB0AAAAkDGEGa2htdHgAAAmAAAAAEwAAADBEgAAQbG9jYQAACZQAAAAaAAAAGgsICJBtYXhwAAAJsAAAACAAAAAgASgBD25hbWUAAAnQAAACZwAABOD4no+3cG9zdAAADDgAAABsAAAAmF+yXM9wcmVwAAAMpAAAAC4AAAAusPIrFAAAAAEAAAAAyYlvMQAAAADLVHQgAAAAAM/u9uZ4nGNgZGBg4ANiCQYQYGJgBEJuIGYB8xgABMMAPgAAAHicY2Bm42OcwMDKwMLSw2LMwMDQBqGZihmiwHycoKCyqJjB4YPDh4NsDP+BfNb3DIuAFCOSEgUGRgAKDgt4AAB4nGNgYGBmgGAZBkYGEAgB8hjBfBYGCyDNxcDBwMTA9MHhQ9SHrA8H//9nYACyQyFs/sP86/kX8HtB9UIBIxsDXICRCUgwMaACRoZhDwA3fxKSAAAAAAHyAHABJQB/AIEAdAFGAOsBIwC/ALgAxACGAGYAugBNACcA/wCIeJxdUbtOW0EQ3Q0PA4HE2CA52hSzmZDGe6EFCcTVjWJkO4XlCGk3cpGLcQEfQIFEDdqvGaChpEibBiEXSHxCPiESM2uIojQ7O7NzzpkzS8qRqnfpa89T5ySQwt0GzTb9Tki1swD3pOvrjYy0gwdabGb0ynX7/gsGm9GUO2oA5T1vKQ8ZTTuBWrSn/tH8Cob7/B/zOxi0NNP01DoJ6SEE5ptxS4PvGc26yw/6gtXhYjAwpJim4i4/plL+tzTnasuwtZHRvIMzEfnJNEBTa20Emv7UIdXzcRRLkMumsTaYmLL+JBPBhcl0VVO1zPjawV2ys+hggyrNgQfYw1Z5DB4ODyYU0rckyiwNEfZiq8QIEZMcCjnl3Mn+pED5SBLGvElKO+OGtQbGkdfAoDZPs/88m01tbx3C+FkcwXe/GUs6+MiG2hgRYjtiKYAJREJGVfmGGs+9LAbkUvvPQJSA5fGPf50ItO7YRDyXtXUOMVYIen7b3PLLirtWuc6LQndvqmqo0inN+17OvscDnh4Lw0FjwZvP+/5Kgfo8LK40aA4EQ3o3ev+iteqIq7wXPrIn07+xWgAAAAABAAH//wAPeJyFlctvG1UUh+/12DPN1B7P3JnYjj2Ox4/MuDHxJH5N3UdaEUQLqBIkfQQioJWQ6AMEQkIqsPGCPwA1otuWSmTBhjtps2ADWbJg3EpIXbGouqSbCraJw7kzNo2dRN1cnXN1ZvT7zuuiMEI7ncizyA0URofRBJpCdbQuIFShYY+GZRrxMDVtih5TwQPHtXDFFSIKoWIbuREBjLH27Ny4MsbVx+uOJThavebgVrNRLAiYx06rXsvhxLgWx9xpfHdrs/ekc2Pl2cpPCVEITQpwbj8VQhfXSq2m+Wxqaq2D73Kne5e3NjHqQNj3CRYlJlgUl/jRNP+2Gs2pNYRQiOnmUaQDqm30KqKiTTWPWjboxnTWpvgxjXo0KrtZXAHt7hwIz0YVcj88JnKlJKi3NPAwLyDwZudSmJSMMJFDYaOkaol6XtESx3Gt1VTytdZJ3DCLeaVhVnCBH1fycHTxFXwPX+l2e3d6H/TufGGmMTLTnbSJUdo00zuBswMO/nl3YLeL/wnu9/limCuD3vC54h5NBVz6Li414AI8Vx3iiosKcQXUbrvhFFiYb++HN4DaF4XzFW0fIN4XDWJ3a3XQoq9V8WiyRmdsatV9xUcHims1JloH0YUa090G3Tro3mC6c01f+YwCPquINr1PTaCP6rVTOOmf0GE2dBc7zWIhji3/5MchSuBHgDbU99RMWt3YUNMZMJmx92YP6NsHx/5/M1yvInpnkIOM3Z8fA3JQ2lW1RFC1KaBPDFXNAHYYvGy73aYZZZ3HifbeuiVZCpwA3oQBs0wGPYJbJfg60xrKEbKiNtTe1adwrpBRwlAuQ3q3VRaX0QmQ9a49BTSCuF1MLfQ6+tinOubRBZuWPNoMevGMT+V41KitO1is3D/tpMcq1JHZqDHGs8DoYGDkxJgKjHROeTCmhZvzPm9pod+ltKm4PN7Dyvvldlpsg8D+4AUJZ3F/JBstZz7cbFRxsaAGV6yX/dkcycWf8eS3QlQea+YLjdm3yrOnrhFpUyKVvFE4lpv4bO3Svx/6F/4xmiDu/RT5iI++lko18mY1oX+5UGKR6kmVjM/Zb76yfHtxy+h/SyQ0lLdpdKy/lWB6szatetQJ8nZ80A2Qt6ift6gJeavU3BO4gtxs/KCtNPVibCtYCWY3SIlSBPKXZALXiIR9oZeJ1AuMyxLpHIy/yO7vSiSE+kZvk0ihJ30HgHfzZtEMmvV58x6dtqns0XTAW7Vdm4HJ04OCp/crOO7rd9SGxQAE/mVA9xRN+kVSMRFF6S9JFGUtthkjBA5tFCWc2l4V43Ex9GmUP3SI37Jjmir9KqlaDJ4S4JB3vuM/jzyH1+8MuoZ+QGzfnvPoJb96cZlWjMcKLfgDwB7E634JTY+asjsPzS5CiVnEWY+KsrsIN5rn3mAPjqmQBxGjcGKB9f9ZxY3mYC2L85CJ2FXIxKKyHk+dg0FHbuEc7D5NzWUX32WxFcWNGRAbvwSx0RmIXVDuYySafluQBmzA/ssqJAMLnli+WIC90Gw4lm85wcp0qjArEDPJJV/sSx4P9ungTpgMw5gVC1XO4uULq0s3v1rqLi0vX/z65vlH50f8T/RHmSPTk5xxWBWOluMT6WiOy+tdvWxlV/XQb3o3c6Ssr+r6I708GsX9/nzp1tKFh0s3v7m4vAy/Hnb/KMOvc1wump6Il48K6mGDy02X9Yd65pa+nQIjk76lWxCkG8NBCP0HQS9IpAAAeJxjYGRgYGBhcCrq214Qz2/zlUGenQEEzr/77oug/zewFbB+AHI5GJhAogBwKQ0qeJxjYGRgYH3/P46BgZ0BBNgKGBgZUAEPAE/7At0AAAB4nGNngAB2IGYjhBsYBAAIYADVAAAAAAAAAAAAAFwAyAEeAaACCgKmAx4DggRmAAAAAQAAAAwAagAEAAAAAAACAAEAAgAWAAABAAChAAAAAHiclZI7bxQxFIWPd/JkUYQChEhIyAVKgdBMskm1QkKrRETpQiLRUczueB/K7HhlOxttg8LvoKPgP9DxFxANDR0tHRWi4NjrPIBEgh1p/dm+vufcawNYFWsQmP6e4jSyQB2fI9cwj++RE9wTjyPP4LYoI89iWbyLPIe6+Bh5Hs9rryMv4GbtW+RF3EhuRa7jbrIbeQkPkjdUETOLnL0Kip4FVvAhco1RXyMnSPEz8gzWxE7kWTwUp5HnsCLeR57HW/El8gJWa58iL+JO7UfkOh4l9yMv4UnyEtvQGGECgwF66MNBooF1bGCL1ELB/TYU+ZBRlvsKQ44Se6jQ4a7hef+fh72Crv25kp+8lNWGmeKoOI5jJLb1aGIGvb6TjfWNLdkqdFvJw4l1amjlXtXRZqRN7lSRylZZyhBqpVFWmTEXgWfUrpi/hZOQXdOd4rKuXOtEWT3k5IArPRzTUU5tHKjecZkTpnVbNOnt6jzN8240GD4xtikvZW56043rPMg/dS+dlOceXoR+WPbJ55Dsekq1lJpnypsMUsYOdCW30o103Ytu/lvh+5RWFLfBjm9/N8hJntPhvx92rnoE/kyHdGasGy754kw36vsVf/lFeBi+0COu+cfgQr42G3CRpeLoZ53gmfe3X6rcKt5oVxnptHR9JS8ehVUd5wvvahN2uqxOOpMXapibI5k7Zwbt4xBSaTfoKBufhAnO/uqNcfK8OTs0OQ6l7JIqFjDhYj5WcjevCnI/1DDiI8j4ndWb/5YzDZWh79yomWXeXj7Nnw70/2TIeFPTrlSh89k1ObOSRVZWZfgF0r/zJQB4nG2JUQuCQBCEd07TTg36fb2IyBaLd3vWaUh/vmSJnvpgmG8YcmS8X3Shf3R7QA4OBUocUKHGER5NNbOOEvwc1txnuWkTRb/aPjimJ5vXabI+3VfOiyS15UWvyezM2xiGOPyuMohOH8O8JiO4Af+FsAGNAEuwCFBYsQEBjlmxRgYrWCGwEFlLsBRSWCGwgFkdsAYrXFhZsBQrAAA=) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>15minGit2</title></head><body><article class="markdown-body"><h1 id="sourcetreegit"><a name="user-content-sourcetreegit" href="#sourcetreegit" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SourceTree/Git轻指南</h1>
+<h5 id="mark24"><a name="user-content-mark24" href="#mark24" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>作者：Mark24</h5>
+<h5 id="markzhangyoungqqcom"><a name="user-content-markzhangyoungqqcom" href="#markzhangyoungqqcom" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>邮箱：<a href="mailto:mark.zhangyoung@qq.com">mark.zhangyoung@qq.com</a></h5>
+<h5 id="20160902"><a name="user-content-20160902" href="#20160902" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>时间：2016.09.02</h5>
+<p><img alt="git_logo" src="/Users/Atom/Desktop/15minGit/src/img/00git.jpg" /></p>
+<h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>开头聊聊天</h2>
+<p>之前的15minGit是很不成熟的一篇手记，在内容在关键的地方有所欠缺，所以打算更新下。一方面把自己的一些使用经验记录下，另一方面希望给新手提供一点指导，Git的命令比较混乱，一个命令也会有多种功能，所以对新手不太友好。</p>
+<p>我不想一上来就命令行，我打算先介绍一下SourceTree的用法，顺带着讲讲Git。两边同时并进。</p>
+<p>之前的一篇对SVN充满浓浓的鄙视，哈哈，年轻不懂事……</p>
+<p>一旦提到编辑器，马上就有Vim，Emacs之战。版本控制也差不多，Git和SVN永远有谁好谁坏的争论。其实SVN和Git都差不多。他们更像是对待同一个问题，有人倾向于A解决办法，有人倾向于B，于是设计的方案有所差别，关注的点也有点区别，但是大家本质上还是都去解决这个问题—— 版本控制。条条大路通罗马，大家做的都不错。只是各有所长罢了。</p>
+<p>现在也愈发觉得，你很难直接的去判断一个东西的好和坏，尤其是工具。很多东西不好非黑即白的去分辨。就像我在后面会介绍图形界面软件SourceTree如何使用Git，也会去相应介绍Git命令行。</p>
+<p>有人觉得图形不好，其实我觉得在熟练Git命令行之前，熟悉一下图形也挺好。图形和命令行也是相辅相成的，不一定谁就是高贵，谁就是低贱。还是那句话，各有所长，各取所需。都会最好。</p>
+<h2 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>版本控制是什么？</h2>
+<p>这段是给小白看的，讲了一大堆主语，最后就是不解释主语，谁看了也会头疼。版本控制，简单的说，就是一个保存记录你文件的东西。</p>
+<p>举个例子：在没有版本控制软件之前，大家是怎么工作的呢？<br />
+你在写作/写代码/写论文，反正你在编辑什么东西，然后写的感觉差不多了，就保存起来。突然上司/导师有了个新想法，需要你修改一些东西，然后你就硬着头皮修改，聪明点的人，会另存一个版本。于是时间久了，就会有：</p>
+<ul>
+<li>xxx论文正式版</li>
+<li>xxx论文最终版</li>
+<li>xxx论文绝对不该版</li>
+<li>xxx论文真的不改了</li>
+<li>xxx论文真的真的不改了<br />
+……</li>
+</ul>
+<p>这种类似的经历可能大家都有过。版本控制就是做这个工作，无论是Git还是SVN都可以把每次修改，保存起来，每个版本都会看起来像时间轴一样，方便管理。你可以切换到任何编辑的时间点，查看每次递进修改了什么。可以撤销，会退到任何时候。</p>
+<p>还有就是，版本控制也在多人参与一个项目或者文件的编辑，方面做了工作。设想一下一个宏大的项目，很多工程师参与其中；或者一本书的编辑，很多校对、翻译参与其中。</p>
+<p>其实版本控制应用场景相当的广泛，所有有了那句—— 编程从版本控制开始。</p>
+<h2 id="git-vs-svn"><a name="user-content-git-vs-svn" href="#git-vs-svn" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Git VS SVN</h2>
+<p>我现在保持的观点是，两者没有好坏，可是初学者还是会纠结两者，总想选择一个『好的』，这样子一劳永逸。这是正常的心态。选择Git的人，就会来看这篇笔记。在你们心里，一定觉得Git是『正确』的选择。</p>
+<p>我还是那个观点，两个工具，就像是两个人，对于版本控制这个问题，不同的看法衍生出的不同的解决方案，从而写出来的不同的软件。目的都是一样的。只是设计思想和使用方式有区别。</p>
+<p>我们来聊聊他们的关键性的区别。</p>
+<h3 id="svn"><a name="user-content-svn" href="#svn" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SVN</h3>
+<p>看一下SVN的模型。<br />
+<img alt="svn_flow" src="/Users/Atom/Desktop/15minGit/src/img/02svn_flow.jpg" /></p>
+<p>大家能看的出，比较简洁，实际上SVN使用的时候也是比较简单的。Windows上面推荐 TortoiseSVN非常好用(个人觉得，对应的Windows平台面向Git的TortoiseGit很难用，个人不推荐，后面再讲原因)，Mac上推荐Cornerstone(别用SmartSVN,这个软件简直是软件设计的反面教材——我只想说，打开完界面，所有人都是一脸懵逼。)</p>
+<p>当然，GUI能办到的，命令行一样都能办到，而且会快的多。时间富裕的同学可以去研究一下SVN的官方文档。</p>
+<p>简单点说，SVN的最大特点就是集中式，它会把代码保存在中央服务器上。没错，整体上来看，你得自己搞一个服务器，这个服务器就是用来储存代码/文件。然后大家不论是提交还是下载都去访问这个服务器，除了这个服务器，没有任何人拥有全部代码 —— 当然除非你整个目录下载下来。</p>
+<p>SVN的权限设计的比较完整，可以精确到目录、文件。这个被很多企业所欢迎，因为处于安全考虑，不让任何人拿到代码是政治正确。但是也带来了问题 —— 中央服务器如果被干掉了，也就意味着，没有任何人能恢复代码库，每个人手上的都是代码片段。这也就是Git宣称他们比SVN先进的地方，Git是分布式的。</p>
+<p>但是我个人觉得，这很牵强。因为中央服务器可以持续的备份，各种稳妥的备份方案。即使是Git分布式的，也不排除所有人都把代码丢了。。。。好吧，我在抬杠。</p>
+<p>SVN的分支功能好像很弱。合并分支和文件的时候比较慢。好了到此打住，我们聊聊主角Git。</p>
+<h3 id="git"><a name="user-content-git" href="#git" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Git</h3>
+<p>Git的特点就是采用了分布式设计。号称各种优越。我个人觉得所谓的『优越』，只能说Git起步比较晚，完全可以总结前人的设计，还有就是Git是设计用来为Linux内核做版本控制的，Linux内核项目可以说相当的变态，Git需要不断的改良适应这个应用场景，也造就了它的优秀。毕竟是在实际项目中考验出来的。</p>
+<p>Git让每个人都能下载到当时的完整代码，服务器本身和每个人的电脑没有什么区别，仅仅是大家约定都向中心服务器提交而已。但是实际上，每个人都可以下载到完整代码。这样子，你可以在本地任意的切换和编辑。与SVN每次的下载和上传都要和中央服务沟通不同的是，Git在本地也拥有一个虚拟的代码储存的地方，术语叫做本地仓库，总之，结果上来看，就是你可以先把代码储存在本地，先保存起来。也是跟时间轴似的，不需要依赖中央服务器。等你重新连接到网络，可以再上传到中央服务。这个小小的功能看起来没什么，但是SVN不支持。SVN脱离了网络什么都做不了。Git不一样。</p>
+<p>至于这部分怎么用，后面会提到。我们抓住重点，大概知道个什么情况，这样子不会一脸懵逼，看了半天不知道Git要做什么。</p>
+<p>不过网上有个段子，就是Git的离线提交代码是个伪功能，因为Git的命令过于随意和复杂，所以开发人员都需要Google命令 怎么用。所以离开了网络，根本没法用git……哈哈</p>
+<h3 id="git_1"><a name="user-content-git_1" href="#git_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>聊聊Git的工作模型</h3>
+<p>我们看一下Git的工作流程。<br />
+<img alt="git_flow" src="/Users/Atom/Desktop/15minGit/src/img/03git_flow.jpg" /></p>
+<p>比较复杂。教程之后，你应该能看懂一二了。<br />
+没事，这种工具性质的，反正你又不需要理解其中实现原理，你只要知道怎么用就行了。唯熟而已。放松，下面我们开始吧。</p>
+<p>先来聊聊 git flow —— Git设计了自己的一套flow流程。没错，凭空产生，你非要说什么依据，可能就是参照SVN和BitKeeper(Linus之前用的这个，后来Linux社区和这家母公司产生商业纠纷，Linus决定自己写一个版本控制软件——这就是Git的起源。)优化了整体流程产生的流程了吧。反正遵照就是了，这是『Git的正确打开方式』。这也是Git的设计。在以前我很想为Git的这套设计找一个理由 —— 后来觉得，人家不断地在Linux内核工作中检验总结出来的，再以此为参考，校准Git的流程，这就是Git的设计。实用性设计。</p>
+<p>这地方，强制自己熟悉一下。如果你也像我一样，一定要为所有事情寻找个理由的话。用我们大学物理老师的口头禅——遇到不理解的，你先承认一下。等走通了，你大概能就明白当初疑惑之处了。</p>
+<p>上个图：</p>
+<p><img alt="git_map" src="/Users/Atom/Desktop/15minGit/src/img/06git_map.jpg" /></p>
+<p>这幅图，既是Git的设计，也是Git的flow。我们围绕这幅图讲解一下吧。解释一圈，大概也知道个什么情况了。后面我们操作一遍。看不懂就多看几遍。</p>
+<p>首先看这张图中间，四个圆柱 ：</p>
+<ul>
+<li>workspace:工作区，就是你正在写的代码</li>
+<li>index：暂存区，一个本地的缓冲区</li>
+<li>local repository：本地仓库</li>
+<li>remote repository：远程仓库</li>
+</ul>
+<p>属于比较生硬，我来一一解释一下：</p>
+<ul>
+<li>
+<h5 id="workspace"><a name="user-content-workspace" href="#workspace" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>workspace工作区</h5>
+</li>
+</ul>
+<p>就是你正在写的代码，正在打开的编辑器里面的内容，解释完了，就这样。</p>
+<p>比如你在用编辑器Sublime打开了一个文件，那么你看到的这个就是工作区。工作区内容被改变了，意味着你的编辑器里面的内容也会变化。</p>
+<ul>
+<li>
+<h5 id="index"><a name="user-content-index" href="#index" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>index暂存区</h5>
+</li>
+</ul>
+<p>index照理应该翻译叫索引，这里叫暂存区。暂存区是干嘛的？你可以理解成这是Git提供的一个储存的空间。这里可以临时保存一些你提交的记录。这个是本地的。暂存区是Git和SVN的最重要的差别之一。</p>
+<ul>
+<li>
+<h5 id="local-repository"><a name="user-content-local-repository" href="#local-repository" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>local repository本地仓库</h5>
+</li>
+</ul>
+<p>你可以把临时的代码提交到index暂存区，然后暂存区积攒的挺多了，就把代码提交到本地仓库，本地仓库，你可以理解成，git提供的一个特殊区域，这里保存的是，你的每个正式版的代码。</p>
+<p>看名字可以看出来，从1-3都是在本地工作，3就是储存本地最终代码的。</p>
+<p>到此为止，都是在本地工作。</p>
+<ul>
+<li>
+<h5 id="remote-repository"><a name="user-content-remote-repository" href="#remote-repository" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>remote repository 远程仓库</h5>
+</li>
+</ul>
+<p>远程仓库，其实就是服务器那头的储存空间。本地代码可以发送到服务器，让服务器保存起来。</p>
+<p>如果是个人的话，就你一个在提交，无所谓什么汇总，远程服务器就相当于云存储的功能，就是云盘，连上网络可以在任何地方下载。</p>
+<p>如果是多人参与的项目，服务器就是大家约定的提交代码的地方，服务器就像中枢一样，不断的汇总整个团队的最新成果。相当于所有人的云盘。</p>
+<hr />
+<h4 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>工作场景</h4>
+<p>上面的那幅图，箭头的方向其实就是每次提交代码流动的方向，箭头上的文字，就是git的命令。</p>
+<p>下面介绍几个常用的工作场景，这样就能应用在实际的工作学习中。</p>
+<hr />
+<h4 id="1"><a name="user-content-1" href="#1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>场景1：创建仓库，提交代码。</h4>
+<p>这是最最常见的场景了。</p>
+<ol>
+<li>
+<p>首先创建仓库</p>
+<p>仓库，这个词，翻译的很生疏。反正把仓库理解成一个储存空间就对了。我们创建一个仓库，就是创建一个储存空间，和当前的文件关联起来。这个储存空间会每次监视你的输入和改动，并且根据你的命令做一些行为，比如储存起来。</p>
+<p>剧透一下，除了远程仓库在服务器上，其他的储存空间其实都在目录下<code>.git</code> 文件夹下，这里保存了所有的信息。所谓的创建git仓库，也就是在目录下创建这样子的一个目录，这里会保存历史信息。当然如果你把目录删掉了——那就变成普通文件目录了。</p>
+<p>先走着吧，边走边核对。</p>
+<p>首先，我们新建一个远程仓库。</p>
+<p>这边使用的SourceTree的版本是2.3.1。大家自行下载一下，这个客户端除了大文件慢一点，没有什么死角，UI和命令都比较靠谱。TortoiseGit执行的命令和解释的命令不太一样，很多地方，没法预估，实际工作中还会覆盖队友的代码。反正相信我，ST的质量比较高。比较可靠。<br />
+<img alt="st_logo" src="/Users/Atom/Desktop/15minGit/src/img/04st_logo.jpg" /></p>
+<ul>
+<li>创建仓库</li>
+</ul>
+<p>很傻瓜式，我们现在只创建本地仓库，做实验。ST里继承的很友好，你也看到了，这个菜单栏里有很多种方式，之后可以自行慢慢探索。<br />
+<img alt="new_git" src="/Users/Atom/Desktop/15minGit/src/img/07new_git.png" /></p>
+<p>建立一个 <code>st_test</code>项目目录</p>
+<p><img alt="st_test" src="/Users/Atom/Desktop/15minGit/src/img/08st_test.png" /></p>
+<p>接着就会得到一个目录<br />
+这里就是工作目录，常用的Git都在这里可以找到。<br />
+<img alt="st_test_screen_zh" src="/Users/Atom/Desktop/15minGit/src/img/09st_test_screen_zh.png" /></p>
+<p>上面一排，提交、拉取、推送，新人看到了是不是会哭，会一脸懵逼，怎么和书上的不一样。你可以在设置里，切换英文。<br />
+<img alt="st_test_screen_en" src="/Users/Atom/Desktop/15minGit/src/img/10st_test_screen_en.png" /></p>
+<p>这样子可以看得清晰点：</p>
+<pre><code>* 克隆 —— clone
+* 添加 —— add
+* 检出 —— checkout
+* 提交 —— commit
+* 拉取 —— pull
+* 推送 —— push
+* 抓取 —— fetch
+* 分支 —— branch
+* 合并 —— merge
+* 暂存 —— stage
+* 丢弃 —— discard
+</code></pre>
+<p>用Sublime打开目录，新建文件。马上ST那边就能收到。<br />
+<img alt="st_screen_all" src="/Users/Atom/Desktop/15minGit/src/img/11st_screen_all.png" /></p>
+<p>让我们来看一下<br />
+<img alt="st_intro" src="/Users/Atom/Desktop/15minGit/src/img/12st_intro.png" /></p>
+<p>上面的菜单栏里都是Git的原生属性，拓展命令栏，就是ST自带的，已达到快捷设置。然后是左侧的分类栏，这边是一切快速切换 。比如WORKPLACE分类，这边的：</p>
+<pre><code>* 文件状态： 一般我们修改完了，点到这边，能看到如图的这些区域。
+
+* 历史：如果你切换到历史就能看到提交记录组成的时间轴。
+
+* 搜索：不提
+</code></pre>
+<p>分支分类：</p>
+<pre><code>* 本地分支：你在这边可以查看到本地分支的状态
+</code></pre>
+<p>远端：</p>
+<pre><code>* 远程分支：这边就是服务器那边分支的情况。
+</code></pre>
+</li>
+</ol>
+<hr />
+<p>接着来讲一下实际的操作。在刚才的目录里创建文件，在ST的工作区就能看到新增文件。<br />
+我们这个时候需要勾选我们期望的文件，提交到暂存区<br />
+<img alt="st_commit" src="/Users/Atom/Desktop/15minGit/src/img/13st_commit.png" /><br />
+填写一下commit信息，Git里，commit这边不能为空<br />
+<img alt="st_stage" src="/Users/Atom/Desktop/15minGit/src/img/14st_stage.png" /><br />
+点击完提交了,WORKPLACE就被清空了，切换到『历史』，就可以看到这次提交的时间轴。<br />
+<img alt="st_timeline" src="/Users/Atom/Desktop/15minGit/src/img/15st_timeline.png" /><br />
+一次好像看不出什么效果，反复几次：</p>
+<p><code>修改文件 —— 工作区提交到 暂存区 —— 填写commit信息提交</code></p>
+<blockquote>
+<p>注意： 其实你细心可以观察到，文件的图标变成黄色了。是的，这个地方是需要关注的，Git对于文件是有区分状态的。<br />
+最开始是个紫色的<code>问号?</code>这是ST提供的友好提示。意味着，这个文件是新建的，还没有添加到Git的监视中，一旦被添加一次，以后对于这个文件，就是修改状态。就是下面的黄色的状态。</p>
+</blockquote>
+<p><img alt="st_change" src="/Users/Atom/Desktop/15minGit/src/img/16st_change.png" /></p>
+<p>下面用gif演示一下整个过程：<br />
+<img alt="st_commit_flow" src="/Users/Atom/Desktop/15minGit/src/img/17st_commit_flow.gif" /></p>
+<p>看完了这个过程是不是还觉得是挺简单的？</p>
+<p>红框部分，就是分支图谱，在这边你能看到自己的提交的时间线。<br />
+<img alt="st_graph" src="/Users/Atom/Desktop/15minGit/src/img/18st_graph.png" /></p>
+<blockquote>
+<p>场景1：简单的提交信息，就到此为止。我们仅仅完成了这幅图例红框的部分。</p>
+</blockquote>
+<p><img alt="git_map_commit" src="/Users/Atom/Desktop/15minGit/src/img/19git_map_commit.jpg" /></p>
+<hr />
+<h3 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>命令行介绍</h3>
+<p>下面我们用 命令行来完成这一系列的操作试试。</p>
+<ol>
+<li>新建Git仓库</li>
+</ol>
+<p><code>git init</code></p>
+<p><a href="http://www.runoob.com/linux/linux-command-manual.html">基础的命令行操作参考</a></p>
+<p>我们只要打开一个目录，执行 <code>git init</code>，就会在当前工作目录下生成 <code>.git</code> 文件夹，Unix/Linux系统下，这个文件是隐藏的，因为文件名前加个点，是隐藏文件的意思。</p>
+<ul>
+<li>
+<p><code>mkdir st_test2</code> 新建一个叫做 st_test2的目录</p>
+</li>
+<li>
+<p><code>cd st_test2</code> 进入目录</p>
+</li>
+<li>
+<p><code>git init</code> 在目录下初始化git</p>
+</li>
+</ul>
+<p>到此为止，就是ST刚才新建的本地仓库的操作，是等效的。</p>
+<ol>
+<li>
+<p>然后在目录下新建一个  <code>test.txt</code> ,编辑一下什么内容</p>
+</li>
+<li>
+<p>编辑文件结束后<br />
+    一般是这样，黑黑的命令行，我们会搞不清楚情况，这时候文件的状态。所以有一个命令，非常常用，就是查看当前文件的状态。<br />
+<code>git status</code> 这个命令的作用其实就是ST图形界面的作用，ST显示的更加彻底，还有diff的状态。</p>
+<ul>
+<li><code>git status</code> 查看当前仓库的状态</li>
+</ul>
+<p>显示有一个 test.txt 文件没有被追踪.untracked files写的很清楚。这就在告诉你，这是新的文件，需要你特意添加到 git的追踪下。</p>
+<pre><code>On branch master
+
+Initial commit
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+    test.txt
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+
+</code></pre>
+
+<ul>
+<li><code>git add .</code> 把当前所有文件添加进入git追踪</li>
+</ul>
+<p>add 命令后面的 <code>.</code> 是通配符，意思是当前目录下所有文件。</p>
+<p>add 命令有两种方式：如果这个文件是新文件，还未被追踪，那么你<code>git add</code>就是添加到git的追踪；如果这个文件是老文件了，你只是在修改它，<code>git add</code>就是把修改片段提交到<code>暂存区</code>。</p>
+<p>add后面也可以加上具体的文件名，也可以用通配符，批量选择文件。</p>
+<p>操作结束，我们看一下 <code>git status</code> 再次检查下状态。<br />
+这里显示，暂存区里有一个文件，待commit。意思就是，暂存区里有一个文件，还没有被提交到本地仓库。</p>
+<pre><code>On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+
+    new file:   test.txt
+
+
+
+</code></pre>
+
+<p>下面我们就要正式提交了。<code>git commit -m '第一次提交'</code>，<code>-m</code>参数，后面跟上的是提交信息，就是打一段文字，记录到底做了什么，方便到时候回来能想起来。</p>
+<p>输入<code>git commit -m '第一次提交'</code>我会看到：</p>
+<p><pre><code>[master (root-commit) da496b1] 第一次提交
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+
+</code></pre><br />
+这表示，我们的信息已经提交了。你可以做再运行<code>git status</code>查看下状态。</p>
+<p><pre><code>On branch master
+nothing to commit, working tree clean
+</code></pre><br />
+这表明，暂存区已经没有什么需要提交了。目录是干净的。<br />
+这就是我们需要达到的最终在状态。</p>
+</li>
+</ol>
+<p>通过gif看的清楚一点<br />
+<img alt="st_cmd_commit_flow" src="/Users/Atom/Desktop/15minGit/src/img/20st_cmd_commit_flow.gif" /></p>
+<hr />
+<h6 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>总结一下</h6>
+<p>其实你只要熟悉ST的界面，脑子里面建立一个数据流动的心理模型就好了。每次的操作，我们都通过<code>git status</code>来明确我们目前处在流动模型的什么位置。然后再来决定下一步的动作。</p>
+<p>目前我们用到的命令</p>
+<ul>
+<li>
+<p><code>git init</code> 初始化仓库，会在当前目录下生成一个 <code>.git</code> 文件夹。</p>
+</li>
+<li>
+<p><code>git status</code> 查看当前状态。通过这个状态时刻去判断我们下一步要做什么。</p>
+</li>
+<li>
+<p><code>git add .</code> 把当前目录下所有文件，添加进<code>暂存区</code>/添加新文件到git追踪。</p>
+</li>
+<li>
+<p><code>git commit -m '提交信息'</code> 填写信息提交到本地仓库</p>
+</li>
+</ul>
+<hr />
+<ol>
+<li>dadd</li>
+</ol></article></body></html>
