@@ -1019,7 +1019,7 @@ body .markdown-body
 <h5 id="mark24"><a name="user-content-mark24" href="#mark24" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>作者：Mark24</h5>
 <h5 id="markzhangyoungqqcom"><a name="user-content-markzhangyoungqqcom" href="#markzhangyoungqqcom" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>邮箱：<a href="mailto:mark.zhangyoung@qq.com">mark.zhangyoung@qq.com</a></h5>
 <h5 id="20160902"><a name="user-content-20160902" href="#20160902" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>时间：2016.09.02</h5>
-<p><img alt="git_logo" src="/Users/Atom/Desktop/15minGit/img/00git.jpg" /></p>
+<p><img alt="git_logo" src="/Users/Atom/Workplace/15minGit/img/00git.jpg" /></p>
 <h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>开头聊聊天</h2>
 <p>之前的15minGit是很不成熟的一篇手记，在内容在关键的地方有所欠缺，所以打算更新下。一方面把自己的一些使用经验记录下，另一方面希望给新手提供一点指导，Git的命令比较混乱，一个命令也会有多种功能，所以对新手不太友好。</p>
 <p>我不想一上来就命令行，我打算先介绍一下SourceTree的用法，顺带着讲讲Git。两边同时并进。</p>
@@ -1048,7 +1048,7 @@ body .markdown-body
 <p>我们来聊聊他们的关键性的区别。</p>
 <h3 id="svn"><a name="user-content-svn" href="#svn" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SVN</h3>
 <p>看一下SVN的模型。<br />
-<img alt="svn_flow" src="/Users/Atom/Desktop/15minGit/img/02svn_flow.jpg" /></p>
+<img alt="svn_flow" src="/Users/Atom/Workplace/15minGit/img/02svn_flow.jpg" /></p>
 <p>大家能看的出，比较简洁，实际上SVN使用的时候也是比较简单的。Windows上面推荐 TortoiseSVN非常好用(个人觉得，对应的Windows平台面向Git的TortoiseGit很难用，个人不推荐，后面再讲原因)，Mac上推荐Cornerstone(别用SmartSVN,这个软件简直是软件设计的反面教材——我只想说，打开完界面，所有人都是一脸懵逼。)</p>
 <p>当然，GUI能办到的，命令行一样都能办到，而且会快的多。时间富裕的同学可以去研究一下SVN的官方文档。</p>
 <p>简单点说，SVN的最大特点就是集中式，它会把代码保存在中央服务器上。没错，整体上来看，你得自己搞一个服务器，这个服务器就是用来储存代码/文件。然后大家不论是提交还是下载都去访问这个服务器，除了这个服务器，没有任何人拥有全部代码 —— 当然除非你整个目录下载下来。</p>
@@ -1062,13 +1062,13 @@ body .markdown-body
 <p>不过网上有个段子，就是Git的离线提交代码是个伪功能，因为Git的命令过于随意和复杂，所以开发人员都需要Google命令 怎么用。所以离开了网络，根本没法用git……哈哈</p>
 <h3 id="git_1"><a name="user-content-git_1" href="#git_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>聊聊Git的工作模型</h3>
 <p>我们看一下Git的工作流程。<br />
-<img alt="git_flow" src="/Users/Atom/Desktop/15minGit/img/03git_flow.jpg" /></p>
+<img alt="git_flow" src="/Users/Atom/Workplace/15minGit/img/03git_flow.jpg" /></p>
 <p>比较复杂。教程之后，你应该能看懂一二了。<br />
 没事，这种工具性质的，反正你又不需要理解其中实现原理，你只要知道怎么用就行了。唯熟而已。放松，下面我们开始吧。</p>
 <p>先来聊聊 git flow —— Git设计了自己的一套flow流程。没错，凭空产生，你非要说什么依据，可能就是参照SVN和BitKeeper(Linus之前用的这个，后来Linux社区和这家母公司产生商业纠纷，Linus决定自己写一个版本控制软件——这就是Git的起源。)优化了整体流程产生的流程了吧。反正遵照就是了，这是『Git的正确打开方式』。这也是Git的设计。在以前我很想为Git的这套设计找一个理由 —— 后来觉得，人家不断地在Linux内核工作中检验总结出来的，再以此为参考，校准Git的流程，这就是Git的设计。实用性设计。</p>
 <p>这地方，强制自己熟悉一下。如果你也像我一样，一定要为所有事情寻找个理由的话。用我们大学物理老师的口头禅——遇到不理解的，你先承认一下。等走通了，你大概能就明白当初疑惑之处了。</p>
 <p>上个图：</p>
-<p><img alt="git_map" src="/Users/Atom/Desktop/15minGit/img/06git_map.jpg" /></p>
+<p><img alt="git_map" src="/Users/Atom/Workplace/15minGit/img/06git_map.jpg" /></p>
 <p>这幅图，既是Git的设计，也是Git的flow。我们围绕这幅图讲解一下吧。解释一圈，大概也知道个什么情况了。后面我们操作一遍。看不懂就多看几遍。</p>
 <p>首先看这张图中间，四个圆柱 ：</p>
 <ul>
@@ -1122,19 +1122,19 @@ body .markdown-body
 <p>先走着吧，边走边核对。</p>
 <p>首先，我们新建一个远程仓库。</p>
 <p>这边使用的SourceTree的版本是2.3.1。大家自行下载一下，这个客户端除了大文件慢一点，没有什么死角，UI和命令都比较靠谱。TortoiseGit执行的命令和解释的命令不太一样，很多地方，没法预估，实际工作中还会覆盖队友的代码。反正相信我，ST的质量比较高。比较可靠。<br />
-<img alt="st_logo" src="/Users/Atom/Desktop/15minGit/img/04st_logo.jpg" /></p>
+<img alt="st_logo" src="/Users/Atom/Workplace/15minGit/img/04st_logo.jpg" /></p>
 <ul>
 <li>创建仓库</li>
 </ul>
 <p>很傻瓜式，我们现在只创建本地仓库，做实验。ST里继承的很友好，你也看到了，这个菜单栏里有很多种方式，之后可以自行慢慢探索。<br />
-<img alt="new_git" src="/Users/Atom/Desktop/15minGit/img/07new_git.png" /></p>
+<img alt="new_git" src="/Users/Atom/Workplace/15minGit/img/07new_git.png" /></p>
 <p>建立一个 <code>st_test</code>项目目录</p>
-<p><img alt="st_test" src="/Users/Atom/Desktop/15minGit/img/08st_test.png" /></p>
+<p><img alt="st_test" src="/Users/Atom/Workplace/15minGit/img/08st_test.png" /></p>
 <p>接着就会得到一个目录<br />
 这里就是工作目录，常用的Git都在这里可以找到。<br />
-<img alt="st_test_screen_zh" src="/Users/Atom/Desktop/15minGit/img/09st_test_screen_zh.png" /></p>
+<img alt="st_test_screen_zh" src="/Users/Atom/Workplace/15minGit/img/09st_test_screen_zh.png" /></p>
 <p>上面一排，提交、拉取、推送，新人看到了是不是会哭，会一脸懵逼，怎么和书上的不一样。你可以在设置里，切换英文。<br />
-<img alt="st_test_screen_en" src="/Users/Atom/Desktop/15minGit/img/10st_test_screen_en.png" /></p>
+<img alt="st_test_screen_en" src="/Users/Atom/Workplace/15minGit/img/10st_test_screen_en.png" /></p>
 <p>这样子可以看得清晰点：</p>
 <pre><code>* 克隆 —— clone
 * 添加 —— add
@@ -1149,9 +1149,9 @@ body .markdown-body
 * 丢弃 —— discard
 </code></pre>
 <p>用Sublime打开目录，新建文件。马上ST那边就能收到。<br />
-<img alt="st_screen_all" src="/Users/Atom/Desktop/15minGit/img/11st_screen_all.png" /></p>
+<img alt="st_screen_all" src="/Users/Atom/Workplace/15minGit/img/11st_screen_all.png" /></p>
 <p>让我们来看一下<br />
-<img alt="st_intro" src="/Users/Atom/Desktop/15minGit/img/12st_intro.png" /></p>
+<img alt="st_intro" src="/Users/Atom/Workplace/15minGit/img/12st_intro.png" /></p>
 <p>上面的菜单栏里都是Git的原生属性，拓展命令栏，就是ST自带的，已达到快捷设置。然后是左侧的分类栏，这边是一切快速切换 。比如WORKPLACE分类，这边的：</p>
 <pre><code>* 文件状态： 一般我们修改完了，点到这边，能看到如图的这些区域。
 
@@ -1170,27 +1170,27 @@ body .markdown-body
 <hr />
 <p>接着来讲一下实际的操作。在刚才的目录里创建文件，在ST的工作区就能看到新增文件。<br />
 我们这个时候需要勾选我们期望的文件，提交到暂存区<br />
-<img alt="st_commit" src="/Users/Atom/Desktop/15minGit/img/13st_commit.png" /><br />
+<img alt="st_commit" src="/Users/Atom/Workplace/15minGit/img/13st_commit.png" /><br />
 填写一下commit信息，Git里，commit这边不能为空<br />
-<img alt="st_stage" src="/Users/Atom/Desktop/15minGit/img/14st_stage.png" /><br />
+<img alt="st_stage" src="/Users/Atom/Workplace/15minGit/img/14st_stage.png" /><br />
 点击完提交了,WORKPLACE就被清空了，切换到『历史』，就可以看到这次提交的时间轴。<br />
-<img alt="st_timeline" src="/Users/Atom/Desktop/15minGit/img/15st_timeline.png" /><br />
+<img alt="st_timeline" src="/Users/Atom/Workplace/15minGit/img/15st_timeline.png" /><br />
 一次好像看不出什么效果，反复几次：</p>
 <p><code>修改文件 —— 工作区提交到 暂存区 —— 填写commit信息提交</code></p>
 <blockquote>
 <p>注意： 其实你细心可以观察到，文件的图标变成黄色了。是的，这个地方是需要关注的，Git对于文件是有区分状态的。<br />
 最开始是个紫色的<code>问号?</code>这是ST提供的友好提示。意味着，这个文件是新建的，还没有添加到Git的监视中，一旦被添加一次，以后对于这个文件，就是修改状态。就是下面的黄色的状态。</p>
 </blockquote>
-<p><img alt="st_change" src="/Users/Atom/Desktop/15minGit/img/16st_change.png" /></p>
+<p><img alt="st_change" src="/Users/Atom/Workplace/15minGit/img/16st_change.png" /></p>
 <p>下面用gif演示一下整个过程：<br />
-<img alt="st_commit_flow" src="/Users/Atom/Desktop/15minGit/img/17st_commit_flow.gif" /></p>
+<img alt="st_commit_flow" src="/Users/Atom/Workplace/15minGit/img/17st_commit_flow.gif" /></p>
 <p>看完了这个过程是不是还觉得是挺简单的？</p>
 <p>红框部分，就是分支图谱，在这边你能看到自己的提交的时间线。<br />
-<img alt="st_graph" src="/Users/Atom/Desktop/15minGit/img/18st_graph.png" /></p>
+<img alt="st_graph" src="/Users/Atom/Workplace/15minGit/img/18st_graph.png" /></p>
 <blockquote>
 <p>场景1：简单的提交信息，就到此为止。我们仅仅完成了这幅图例红框的部分。</p>
 </blockquote>
-<p><img alt="git_map_commit" src="/Users/Atom/Desktop/15minGit/img/19git_map_commit.jpg" /></p>
+<p><img alt="git_map_commit" src="/Users/Atom/Workplace/15minGit/img/19git_map_commit.jpg" /></p>
 <hr />
 <h3 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>命令行介绍</h3>
 <p>下面我们用 命令行来完成这一系列的操作试试。</p>
@@ -1274,7 +1274,7 @@ nothing to commit, working tree clean
 </li>
 </ol>
 <p>通过gif看的清楚一点<br />
-<img alt="st_cmd_commit_flow" src="/Users/Atom/Desktop/15minGit/img/20st_cmd_commit_flow.gif" /></p>
+<img alt="st_cmd_commit_flow" src="/Users/Atom/Workplace/15minGit/img/20st_cmd_commit_flow.gif" /></p>
 <h4 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>建议</h4>
 <blockquote>
 <p>我们也可以把已经git初始化后的git目录拖动到 ST里面，会有惊喜。我们喜欢这种方式。命令行的有点在于执行速度快，但是不直观。所以一般都是混合使用。项目目录拖动到ST里面。通过ST里面的图形化来看看每次修改的地方，然后再命令行里执行 <code>git add</code>,<code>git commit</code>这些操作在ST里面，一单文件数量庞大，会非常的慢。这样子使用了GUI的直观，也利用了CLI的速度。</p>
@@ -1302,17 +1302,17 @@ nothing to commit, working tree clean
 <p>这个场景，就是一个人在独立工作的时候。什么是分支呢？分支就像是平行世界。之前我们已经看到了，整个的Git提交记录会像时间轴一样，不断地延伸。每个点都是我们提交的一次记录。可以通过ST感受一下。分支呢，就是从这个点，开始向另外一种方向去延伸。</p>
 <p>一般什么时候会用到分支呢？一般是这样子的，我们不断地提交的时候，会遇到这种情况，下面会做一个需求，但是我拿不准，我有两个想法，一个是A一个是B，我也不知道哪个靠谱。所以我决定用分支来解决，我建立一个实验性的分支A，然后不断在的在里面提交，试验我的想法。如果试验成功，我可以选择把分支合并到 主分支上。如果失败，我可以删除A分支。重新建立一个B分支，继续工作。这就是分支在个人使用中的妙用。</p>
 <p>建立在上面的基础上，我们来看看如何建立分支。</p>
-<p><img alt="st_branch" src="/Users/Atom/Desktop/15minGit/img/21st_branch.png" /></p>
+<p><img alt="st_branch" src="/Users/Atom/Workplace/15minGit/img/21st_branch.png" /></p>
 <p>填写一下分支名</p>
-<p><img alt="st_new_branch" src="/Users/Atom/Desktop/15minGit/img/22st_new_branch.png" /></p>
+<p><img alt="st_new_branch" src="/Users/Atom/Workplace/15minGit/img/22st_new_branch.png" /></p>
 <p>然后我们能看到界面上在发生变化。</p>
-<p><img alt="st_branched" src="/Users/Atom/Desktop/15minGit/img/23st_branched.png" /></p>
+<p><img alt="st_branched" src="/Users/Atom/Workplace/15minGit/img/23st_branched.png" /></p>
 <p>左面的快速切换，能看到分支信息，这里粗体指示我们所在的分支。这就是平行世界，你可以通过双击在这里快速切换。</p>
 <h5 id="_7"><a name="user-content-_7" href="#_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>注意：</h5>
 <p>要把自己的工作区清理干净才能切换，否则可能会丢失自己工作区、暂存区里面的内容。</p>
 <p>可以提交干净，或者使用 stage 暂时保存一下。这个后面再说吧。</p>
 <p>我们可以根据上面的经验，无论在ST里面还是命令行里，不断地提交几次。</p>
-<p><img alt="st_branch_A" src="/Users/Atom/Desktop/15minGit/img/24st_branch_A.png" /></p>
+<p><img alt="st_branch_A" src="/Users/Atom/Workplace/15minGit/img/24st_branch_A.png" /></p>
 <p>可以看到 testA 分支的记录在 master上。对了，分支分支，差点又忘介绍主语了。从我们刚开始建立仓库开始，git就分配给我们一个分支，我们称呼为 主分支，默认分支名就是master。所以其实一开始，我们就进入了以主分支为基础的代码提交了。</p>
 <p>这部分如果有不理解的地方，可以查看下 <a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰Git教程</a>来看一下他对于分支的描述。还有可以参考一下<a href="https://git-scm.com/book/zh/v2">《ProGit》</a>。这是一本非常不错的书，如果你有耐心看到最后，肯定收获颇丰。</p>
 <h4 id="_8"><a name="user-content-_8" href="#_8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>合并分支</h4>
@@ -1321,26 +1321,26 @@ nothing to commit, working tree clean
 <p>st里面合并很简单。</p>
 <ul>
 <li>比如我想把testA合并到master最后以master为主。那么我就要县切换到master分支。然后选择<code>合并分支</code><br />
-<img alt="st_branch_pre" src="/Users/Atom/Desktop/15minGit/img/25st_branch_pre.png" /></li>
+<img alt="st_branch_pre" src="/Users/Atom/Workplace/15minGit/img/25st_branch_pre.png" /></li>
 </ul>
 <p>可以通过筛选，找到目标分支，然后选择。就可以进行合并。我们这里是很简单的情况，master分支并没有被持续开发。如果出现master这边也在被人同步开发，也就是一个团队在工作的时候，合并的时候，其实就是写入文件的过程，如果是同一个文件，同一行，被不同人改写了。就会出现冲突。解决冲突的情况，我们后面单独拉出来说。这里就讲最简单的合并情况——要知道实际工作中遇到的情况复杂多了，不可能一一列出。但是万物归宗的道理我们都懂。<br />
-<img alt="st_branch_merge" src="/Users/Atom/Desktop/15minGit/img/26st_branch_merge.png" /></p>
+<img alt="st_branch_merge" src="/Users/Atom/Workplace/15minGit/img/26st_branch_merge.png" /></p>
 <p>合并完。你会发现分支的时间轴上面，master赶上testA了。表示这两个进度达成一致。<br />
-<img alt="st_branch_end" src="/Users/Atom/Desktop/15minGit/img/27st_branch_end.png" /></p>
+<img alt="st_branch_end" src="/Users/Atom/Workplace/15minGit/img/27st_branch_end.png" /></p>
 <p>最后用Gif演示一下整体流程：<br />
 保存按钮被遮挡了，勿介意。</p>
-<p><img alt="st_branch_end" src="/Users/Atom/Desktop/15minGit/img/28st_branch_flow.gif" /></p>
+<p><img alt="st_branch_end" src="/Users/Atom/Workplace/15minGit/img/28st_branch_flow.gif" /></p>
 <h3 id="_9"><a name="user-content-_9" href="#_9" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>命令行介绍</h3>
 <p>还是依照惯例，介绍对应的命令行。</p>
 <p>ST有图形界面，所以没有那么难了解情况，但是命令行就不一样，他需要不断地去通过命令去了解目前的分支情况。</p>
 <p><code>git branch</code> 这个命令用来了解目前分支的情况。</p>
-<p><img alt="cli_branch" src="/Users/Atom/Desktop/15minGit/img/29cli_branch.png" /></p>
+<p><img alt="cli_branch" src="/Users/Atom/Workplace/15minGit/img/29cli_branch.png" /></p>
 <p><code>*</code> 所指向的就是你目前所在分支。其他的表示目前本地的其他分支。</p>
 <p><code>git checkout &lt;分支名&gt;</code> 用这个命令在不同分支之间去切换。</p>
-<p><img alt="cli_branch_checkout" src="/Users/Atom/Desktop/15minGit/img/30cli_branch_checkout.png" /></p>
+<p><img alt="cli_branch_checkout" src="/Users/Atom/Workplace/15minGit/img/30cli_branch_checkout.png" /></p>
 <p>混乱的地方要来了，一个命令多种用法。</p>
 <p><code>git branch &lt;分支名&gt;</code> 用这个命令去创建一个分支。<br />
-<img alt="cli_branch_new" src="/Users/Atom/Desktop/15minGit/img/31cli_branch_new.png" /></p>
+<img alt="cli_branch_new" src="/Users/Atom/Workplace/15minGit/img/31cli_branch_new.png" /></p>
 <p><code>git checkout -b &lt;分支名&gt;</code> 这个命令是创建，并且切换到该分支。<br />
 等价于按顺序执行两个命令：</p>
 <ul>
@@ -1351,7 +1351,7 @@ nothing to commit, working tree clean
 <p><code>git checkout &lt;分支名&gt;</code></p>
 </li>
 </ul>
-<p><img alt="cli_branch_new2" src="/Users/Atom/Desktop/15minGit/img/32cli_branch_new2.png" /></p>
+<p><img alt="cli_branch_new2" src="/Users/Atom/Workplace/15minGit/img/32cli_branch_new2.png" /></p>
 <p>这就是混乱的地方，命令并没有什么设计感，也没有什么逻辑 —— 肌肉记忆吧。反正命令已经饱受吐槽了。</p>
 <p>不过我的个人建议，初期可以按照直觉性的去使用命令。</p>
 <p><code>git branch</code> 罗列分支信息</p>
@@ -1361,7 +1361,7 @@ nothing to commit, working tree clean
 <p><code>git checkout &lt;分支名&gt;</code> 切换分支</p>
 <p>避免使用 <code>git checkout -b &lt;分支名&gt;</code> 这种反直觉的。不过随意啦，我相信，打的多了，一定会强迫自己使用简化命令的。懒，是程序员的美德。</p>
 <p><code>git merge &lt;分支B&gt;</code> 合并分支命令。如果你所在分支A，这个操作将会把B分支的内容合并到A上。</p>
-<p><img alt="cli_merge_flow" src="/Users/Atom/Desktop/15minGit/img/33cli_merge_flow.gif" /></p>
+<p><img alt="cli_merge_flow" src="/Users/Atom/Workplace/15minGit/img/33cli_merge_flow.gif" /></p>
 <hr />
 <h4 id="3"><a name="user-content-3" href="#3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>场景3：多人协作，分支+解决冲突</h4>
 <p>前面已经讲完：</p>
@@ -1414,10 +1414,10 @@ nothing to commit, working tree clean
 </li>
 </ul>
 <p>合并的时候，ST会给出友好提示：<br />
-<img alt="st_conflict" src="/Users/Atom/Desktop/15minGit/img/34st_conflict.png" /><br />
-<img alt="st_conflict_screen" src="/Users/Atom/Desktop/15minGit/img/35st_conflict_screen.png" /><br />
+<img alt="st_conflict" src="/Users/Atom/Workplace/15minGit/img/34st_conflict.png" /><br />
+<img alt="st_conflict_screen" src="/Users/Atom/Workplace/15minGit/img/35st_conflict_screen.png" /><br />
 我们能看到文件的状态确实发生状态了。而且Git修改了文件。我们用Sublime打开文件来看看什么情况。<br />
-<img alt="sublime_conflict" src="/Users/Atom/Desktop/15minGit/img/36sublime_conflict.png" /><br />
+<img alt="sublime_conflict" src="/Users/Atom/Workplace/15minGit/img/36sublime_conflict.png" /><br />
 文件里被插入了奇怪的字符。其实这事git的一种提示。</p>
 <pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 master
@@ -1431,13 +1431,13 @@ testA
 <p>好了，我们下面要解决冲突。要做的就是找人协商——由于我自己做的，我不要协商。<br />
 我有三种选择 —— 1.删除我的保留别的分支的 2.删除别的分支的，保留我的 3.去掉奇怪的乱入的符号，保存大家的。</p>
 <p>ST给了友好的策略,能帮你省点事。当然直接去编辑文件也是可以的。<br />
-<img alt="st_conflict_solution" src="/Users/Atom/Desktop/15minGit/img/37st_conflict_solution.png" /></p>
+<img alt="st_conflict_solution" src="/Users/Atom/Workplace/15minGit/img/37st_conflict_solution.png" /></p>
 <p>就直接手动去改代码。改成这个样子。真的好朴素啊。解决冲突是个既不高大上，也不专精尖的活儿。</p>
-<p><img alt="sublime_conflict_solution" src="/Users/Atom/Desktop/15minGit/img/38sublime_conflict_solution.png" /></p>
+<p><img alt="sublime_conflict_solution" src="/Users/Atom/Workplace/15minGit/img/38sublime_conflict_solution.png" /></p>
 <p>然后你再勇往直前的去正常提交一次就好了。</p>
 <p>最后你会在图谱上看到一个分支合并的轨迹。<br />
-<img alt="st_conflict_merge" src="/Users/Atom/Desktop/15minGit/img/39st_conflict_merge.png" /></p>
-<p><img alt="solve_conflict" src="/Users/Atom/Desktop/15minGit/img/40solve_conflict.gif" /></p>
+<img alt="st_conflict_merge" src="/Users/Atom/Workplace/15minGit/img/39st_conflict_merge.png" /></p>
+<p><img alt="solve_conflict" src="/Users/Atom/Workplace/15minGit/img/40solve_conflict.gif" /></p>
 <hr />
 <h4 id="_10"><a name="user-content-_10" href="#_10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>命令行</h4>
 <p><code>git merge &lt;分支B&gt;</code> 合并分支B</p>
@@ -1449,8 +1449,8 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 <p>除非你解决冲突，否则你不能进行任何操作。</p>
 <p>接着必然去编辑文件。然后回来继续提交。</p>
-<p><img alt="cli_slove_conflict" src="/Users/Atom/Desktop/15minGit/img/41cli_slove_conflict.png" /></p>
-<p><img alt="cli_slove_conflict2" src="/Users/Atom/Desktop/15minGit/img/42cli_solve_conflict.gif" /></p>
+<p><img alt="cli_slove_conflict" src="/Users/Atom/Workplace/15minGit/img/41cli_slove_conflict.png" /></p>
+<p><img alt="cli_slove_conflict2" src="/Users/Atom/Workplace/15minGit/img/42cli_solve_conflict.gif" /></p>
 <p>到此为止，解决冲突的部分结束。</p>
 <hr />
 <h3 id="_11"><a name="user-content-_11" href="#_11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>后记</h3>
